@@ -1,5 +1,7 @@
 # Linkar Demo Desktop App. Windows. Linux. Mac
 
+ejecutable en https://kosday.com/resources/
+
 Funcionamiento de un cliente persistente alimentando unas clases Linkar y mostrando la información resultante sobre unos formularios.
 
 #MainWindow
