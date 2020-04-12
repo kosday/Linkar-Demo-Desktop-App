@@ -2,6 +2,8 @@
 
 This demo shows how a persistent client works with an automatic class and shows database information on a form.
 
+executable in https://kosday.com/resources/
+
 # MainWindow 
   This window gets mandatory information that allows LinkarClient login and logout. If we have already done the login you will have access to the other forms.
 
