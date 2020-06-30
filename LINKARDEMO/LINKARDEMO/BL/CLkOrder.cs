@@ -344,14 +344,13 @@ namespace LINKARDEMO
             if (fileName == null || fileName == "")
                 fileName = CLkOrder.FILE_CLkOrder;
 
-            bool dictionaries = false;
             bool conversion = false;
             bool formatSpec = false;
             bool originalRecords = false;
-            ReadOptions readOptions = new ReadOptions(calculated, conversion, formatSpec, originalRecords, dictionaries);
+            ReadOptions readOptions = new ReadOptions(calculated, conversion, formatSpec, originalRecords);
             string customVars = "";
             //Call to sincronous session version of Read function
-            string lkstring = _LinkarClt.Read_Text(fileName, _Code, "", readOptions, DATAFORMAT_TYPE.MV, customVars, 0);
+            string lkstring = _LinkarClt.Read_Text(fileName, _Code, "", readOptions, DATAFORMATCRU_TYPE.MV, customVars, 0);
 
             char delimiter = ASCII_Chars.FS_chr;
             char delimiterThisList = DBMV_Mark.AM;
@@ -399,7 +398,6 @@ namespace LINKARDEMO
 
             bool readAfter = false;
             bool calculated = false;
-            bool dictionaries = false;
             bool conversion = false;
             bool formatSpec = false;
             bool originalRecords = false;
@@ -423,13 +421,13 @@ namespace LINKARDEMO
                 recordIdType = new RecordIdType(true);
             else
                 recordIdType = new RecordIdType();
-            NewOptions NewOptions = new NewOptions(recordIdType, readAfter, calculated, conversion, formatSpec, originalRecords, dictionaries);
+            NewOptions NewOptions = new NewOptions(recordIdType, readAfter, calculated, conversion, formatSpec, originalRecords);
 
             string customVars = "";
             string inputRecords = this.SetRecord();
 
             //Call to sincronous session version of New function
-            string lkstring = _LinkarClt.New_Text(fileName, _Code, inputRecords, NewOptions, DATAFORMAT_TYPE.MV, DATAFORMAT_TYPE.MV, customVars, 0);
+            string lkstring = _LinkarClt.New_Text(fileName, _Code, inputRecords, NewOptions, DATAFORMAT_TYPE.MV, DATAFORMATCRU_TYPE.MV, customVars, 0);
 
             char delimiter = ASCII_Chars.FS_chr;
             char delimiterThisList = DBMV_Mark.AM;
@@ -478,16 +476,15 @@ namespace LINKARDEMO
             bool optimisticLockControl = false;
             bool readAfter = false;
             bool calculated = false;
-            bool dictionaries = false;
             bool conversion = false;
             bool formatSpec = false;
             bool originalRecords = false;
-            UpdateOptions UpdateOptions = new UpdateOptions(optimisticLockControl, readAfter, calculated, conversion, formatSpec, originalRecords, dictionaries);
+            UpdateOptions UpdateOptions = new UpdateOptions(optimisticLockControl, readAfter, calculated, conversion, formatSpec, originalRecords);
 
             string customVars = "";
             string inputRecords = this.SetRecord();
             //Call to sincronous session version of Update function
-            string lkstring = _LinkarClt.Update_Text(fileName, _Code, inputRecords, UpdateOptions, this.RecordOriginalContent, DATAFORMAT_TYPE.MV, DATAFORMAT_TYPE.MV, customVars, 0);
+            string lkstring = _LinkarClt.Update_Text(fileName, _Code, inputRecords, UpdateOptions, this.RecordOriginalContent, DATAFORMAT_TYPE.MV, DATAFORMATCRU_TYPE.MV, customVars, 0);
 
             char delimiter = ASCII_Chars.FS_chr;
             char delimiterThisList = DBMV_Mark.AM;
@@ -1058,16 +1055,15 @@ namespace LINKARDEMO
             if (fileName == null || fileName == "")
                 fileName = CLkOrder.FILE_CLkOrder;
 
-            bool dictionaries = false;
             bool conversion = false;
             bool formatSpec = false;
             bool originalRecords = false;
             bool onlyRecordId = onlyIds;
-            SelectOptions selectOptions = new SelectOptions(onlyRecordId, pagination, numRegPag, numPag, calculated, conversion, formatSpec, originalRecords, dictionaries);
+            SelectOptions selectOptions = new SelectOptions(onlyRecordId, pagination, numRegPag, numPag, calculated, conversion, formatSpec, originalRecords);
 
             string ge = "";
             //Call to sincronous session version of Select function
-            string lkstring = _LinkarClt.Select_Text(fileName, selectClause, sortClause, dictionariesClause, preSelectClause, selectOptions, DATAFORMAT_TYPE.MV, "", 0);
+            string lkstring = _LinkarClt.Select_Text(fileName, selectClause, sortClause, dictionariesClause, preSelectClause, selectOptions, DATAFORMATCRU_TYPE.MV, "", 0);
 
             this.Clear();
 
