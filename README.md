@@ -4,6 +4,9 @@ This demo shows how a persistent client works with an automatic class and shows 
 
 executable in https://kosday.com/resources/
 
+We advise you to use the Linkar Framework for .NET, CORE, JAVA and C.
+
+ 
 # MainWindow 
   This window gets mandatory information that allows LinkarClient login and logout. If we have already done the login you will have access to the other forms.
 

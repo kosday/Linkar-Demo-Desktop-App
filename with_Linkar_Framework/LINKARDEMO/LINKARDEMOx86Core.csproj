@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <Platforms>AnyCPU;x86</Platforms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Linkar">
+      <HintPath>..\..\LinkarClients\Core\x86\Linkar.dll</HintPath>
+    </Reference>
+    <Reference Include="Linkar.Functions">
+      <HintPath>..\..\LinkarClients\Core\x86\Linkar.Functions.dll</HintPath>
+    </Reference>
+    <Reference Include="Linkar.Functions.Persistent.MV">
+      <HintPath>..\..\LinkarClients\Core\x86\Linkar.Functions.Persistent.MV.dll</HintPath>
+    </Reference>
+    <Reference Include="Linkar.Strings">
+      <HintPath>..\..\LinkarClients\Core\x86\Linkar.Strings.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
